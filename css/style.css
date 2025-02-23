@@ -4,8 +4,15 @@ body{
     color: #fff;
     font-family: "Inter", serif;
 }
+header{
+    font-size: 64px;
+    text-align: center;
+    margin: 20px 0;
+    text-decoration: underline;
+    text-underline-offset: .3em;
+}
 .form_container{
-    padding: 50px;
+    padding: 20px 50px;
     place-content: center;
     width: 1181px;
     margin-top: 40px;
@@ -15,6 +22,11 @@ h1{
     line-height: 77px;
     font-weight: 400;
     text-align: left;
+}
+footer{
+    text-align: start;
+    font-size: 15px;
+    padding: 30px 0;
 }
 input.form-control,
 input.form-control:focus{
@@ -45,8 +57,9 @@ input[type="date"].form-control{
     border: 1px solid #fff;
     appearance: none;
     border-radius: 100%;
+    position: relative;
 }
-.input_radio div{
+.input_radio label{
     margin-right: 20px;
 }
 .input_radio{
@@ -54,6 +67,20 @@ input[type="date"].form-control{
     align-items: center;
     font-size: 24px;
     margin-top: 20px;
+}
+.input_radio input[type="radio"]:checked{
+    background-color: #fff;
+}
+input[type="radio"]:checked::before{
+    content: '';
+    background-color: #0d6efd;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 .input_checkbox{
     font-weight: 300;
@@ -66,8 +93,19 @@ input[type="date"].form-control{
     height: 21px;
     appearance: none;
     border: 1px solid #fff;
+    position: relative;
 }
-.btn{
+input[type="checkbox"]:checked{
+    background-color: #fff;
+}
+input[type="checkbox"]:checked::before{
+    content: '\2713';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.btn,.btn:hover{
     background-color: #fff;
     color: #000;
     width: 226px;
@@ -76,4 +114,10 @@ input[type="date"].form-control{
     font-weight: 300;
     font-size: 24px;
     line-height: 29px;
+}
+/* .form-control:invalid {
+    border-color: red;
+} */
+.form-control:valid {
+    border-color: green;
 }
