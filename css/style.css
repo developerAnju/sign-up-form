@@ -115,9 +115,9 @@ input[type="checkbox"]:checked::before{
     font-size: 24px;
     line-height: 29px;
 }
-/* .form-control:invalid {
+.form-control:invalid {
     border-color: red;
-} */
+}
 .form-control:valid {
     border-color: green;
 }
